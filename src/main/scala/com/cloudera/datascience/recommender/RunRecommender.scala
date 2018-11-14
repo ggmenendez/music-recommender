@@ -33,7 +33,7 @@ object RunRecommender {
     val spark = SparkSession.builder().config(sparkConf).getOrCreate()
 //    spark.sparkContext.setCheckpointDir("/home/pablo/Escritorio/aas/ch03-recommender/")
 
-    val base = "/home/pablo/Escritorio/aas/ch03-recommender/"
+    val base = "/data/"
     val rawUserArtistData = spark.read.textFile(base + "user_artist_data_10000.txt")
     val rawArtistData = spark.read.textFile(base + "artist_data.txt")
     val rawArtistAlias = spark.read.textFile(base + "artist_alias.txt")
